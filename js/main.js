@@ -21,8 +21,12 @@ $(document).ready(function(){
   });
 
 
-  $(".menu-btn").click(function(){
+  $(".menu-btn, .menu-close-btn").click(function(){
     $(".mobile-navi").slideToggle("slow");
   });
+
+  const logoEl = document.getElementById("logo-el");
+
+  logoEl.innerHTML = `<img src="logo.png" alt="site_logo">`
 
 });

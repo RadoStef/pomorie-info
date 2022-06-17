@@ -45,5 +45,45 @@
 nav {
     .mobile-navi {
         display: none;
+        ul {
+            li {
+                list-style: none;
+                
+                h4 {
+                    display: block;
+                    width: 35%;
+                    text-transform: uppercase;
+                    font-weight: 400;
+                    border-bottom: 1px solid @color-tomato;
+                    padding-bottom: 3px;
+                }
+
+                a {
+                    padding: 5px 15px;
+                    display: block;
+                    border-left: 3px solid @color-white;
+
+                    &:hover {
+                        border-left: 3px solid @color-blue;
+                    }
+                }
+
+                .menu-close-btn {
+                    margin: 15px;
+                    padding: 10px;
+                    font-size: 22px;
+                    background-color: @color-tomato;
+                    color: @color-white;
+                    border: none;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: @color-blue;
+                    }
+                }
+
+            }
+
+        }
     }
 }
