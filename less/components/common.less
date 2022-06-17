@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     font-size: 18px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     scroll-behavior: smooth;
 }
 
@@ -20,4 +20,25 @@ a {
 .container {
     width: 70%;
     margin: 0 15%;
+}
+
+.category-container {
+    width: 70%;
+    margin: 0 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: -100px;
+    z-index: 100;
+    background-color: @color-white;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+h4 {
+    font-weight: 500;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    border-bottom: 2px solid @color-blue;
 }
