@@ -1,0 +1,9 @@
+        @media screen and (max-width: @mobile) {
+            width: 90%;
+            margin-left: 5%;
+        }
+
+    @media screen and (max-width: @tablet) {
+        width: 90%;
+        margin-left: 5%;
+    }
