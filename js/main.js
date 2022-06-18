@@ -26,7 +26,20 @@ $(document).ready(function(){
   });
 
   const logoEl = document.getElementById("logo-el");
+  const footerEl = document.getElementById("footer-el");
+  const sourcesEl = document.getElementById("sources-el");
+
+  let sources = [`<a href="https://www.wikipedia.org">Wikipedia</a>,  
+                  <a href="https://pomorietourism.bg/"> Pomorietourism</a>, 
+                  <a href="https://pomorie.bg/"> Pomorie официален сайт</a>, 
+                  <a href="https://opoznai.bg/"Opoznai.bg> Opoznai.bg</a>, 
+                  <a href="https://pomoriemonastery.com"> Официален сайт на манастир "Свети Георги"</a>`
+                ];
+
 
   logoEl.innerHTML = `<img src="logo.png" alt="site_logo">`
+  footerEl.textContent = "pomorie-info.com 2022. v1.0.22"
+  sourcesEl.innerHTML = sources;
+  
 
 });
