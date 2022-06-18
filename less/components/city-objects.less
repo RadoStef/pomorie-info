@@ -20,22 +20,39 @@
             background-color: @color-white;
             -webkit-box-shadow: 0px 7px 13px 0px rgba(0,0,0,0.10); 
             box-shadow: 0px 7px 13px 0px rgba(0,0,0,0.10);
+
+            @media screen and (max-width: @tablet) {
+                width: 95%;
+            }
+
+            @media screen and (max-width: @mobile) {
+                display: block;
+            }
+
+            
     
             .image-holder {
                 width: 30%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                margin: auto;
     
                 img {
-                    width: 250px;
-                    height: 200px;
+                    width: 200px;
+                    height: 150px;
                     border-radius: 4px;
+
+                    @media screen and (max-width: @tablet) {
+                        width: 180px;
+                        height: 130px;
+                    }
+
                 }
             }
     
             .content-holder {
-                width: 70%;
+                width: 100%;
 
                 .info-wrapper {
                     width: 100%;
@@ -43,9 +60,20 @@
                     justify-content: space-between;
                     align-items: center;
 
+                    @media screen and (max-width: @mobile) {
+                       flex-direction: column;
+                       text-align: center;
+                        
+                    }
+
+                    p {
+                        @media screen and (max-width: @tablet) {
+                           font-size: 15px;
+                        }
+                    }
+
                     button {
-                        margin-top: 10px;
-                        margin-bottom: 10px;
+                        margin: 10px 20px 10px 0;
                         padding: 10px 20px;
                         border: 1px solid @color-blue;
                         border-top: 4px solid @color-blue;
@@ -53,13 +81,14 @@
                         text-transform: uppercase;
             
                         @media screen and (max-width: @tablet) {
-                            font-size: 16px;
-                            
+                            font-size: 15px;
+                            padding: 5px 10px;
                         }
             
                         @media screen and (max-width: @mobile) {
                             font-size: 16px;
-                            padding: 15px;
+                            padding: 10px;
+                            margin-top: 30px;
                         }
             
                         &:hover {
@@ -69,11 +98,29 @@
                             cursor: pointer;
                         }
                     }
+
+                    span {
+                        font-size: 18px;
+                        font-weight: 300;
+                        COLOR: @color-tomato;
+
+                        @media screen and (max-width: @tablet) {
+                            font-size: 15px;
+                        }
+
+                        @media screen and (max-width: @mobile) {
+                            padding-top: 10px;
+                             
+                         }
+
+                        i {
+                            color: @color-blue;
+                        }
+                    }
                 }
 
                 h4 {
                     text-align: center;
-                    
                 }
             }
         }

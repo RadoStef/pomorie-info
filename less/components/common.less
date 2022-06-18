@@ -21,8 +21,14 @@ a {
     width: 70%;
     margin: 0 15%;
 
-    p {
-        padding-left: 52px;
+    @media screen and (max-width: @tablet) {
+        width: 85%;
+        margin: 0 7.5%;
+    }
+
+    @media screen and (max-width: @mobile) {
+        width: 95%;
+        margin: 0 2.5%;
     }
 }
 
@@ -61,4 +67,9 @@ h4 {
 
 hr {
     display: none;
+}
+
+marquee {
+    color: @color-blue;
+    padding-top: 20px;
 }
