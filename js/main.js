@@ -20,6 +20,21 @@ $(document).ready(function(){
     }
   });
 
+  var btn = $('#button');
+
+  $(window).scroll(function() {
+    if ($(window).scrollTop() > 300) {
+      btn.addClass('show');
+    } else {
+      btn.removeClass('show');
+    }
+  });
+  
+  btn.on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({scrollTop:0}, '300');
+  });
+
 
   $(".menu-btn, .menu-close-btn").click(function(){
     $(".mobile-navi").slideToggle("slow");
@@ -34,9 +49,12 @@ $(document).ready(function(){
   const sourcesEl = document.getElementById("sources-el");
   const menuEl = document.getElementById("menu-el");
 
+  logoEl.innerHTML = `<img src="https://www.sitefocus.eu/logo.png" alt="site_logo">`
+  footerEl.textContent = "pomorie-info.com 2022. v1.0.22"
+
   menuEl.innerHTML = `<li>
   <h4>Забележителности и история</h4>
-  <a href="https://www.sitefocus.eu/sitefocus" target="_blank">Музеи</a>
+  <a href="#" target="_blank">Музеи</a>
   <a href="#">Забележителности</a>
   <a href="#">История на Поморие</a>
 </li>
@@ -99,20 +117,7 @@ $(document).ready(function(){
   <a href="#">Бийч барове</a>
 </li>`
 
-
-  let isOpen = true;
-
-  let sources = [`<a href="https://www.wikipedia.org">Wikipedia</a>,  
-                  <a href="https://pomorietourism.bg/"> Pomorietourism</a>, 
-                  <a href="https://pomorie.bg/"> Pomorie официален сайт</a>, 
-                  <a href="https://opoznai.bg/"Opoznai.bg> Opoznai.bg</a>, 
-                  <a href="https://pomoriemonastery.com"> Официален сайт на манастир "Свети Георги"</a>`
-                ];
-
-
-  logoEl.innerHTML = `<img src="https://www.sitefocus.eu/logo.png" alt="site_logo">`
-  footerEl.textContent = "pomorie-info.com 2022. v1.0.22"
-  sourcesEl.innerHTML = sources;
+  
   
 
 });
