@@ -35,10 +35,10 @@ $(document).ready(function(){
     $('html, body').animate({scrollTop:0}, '300');
   });
 
-
   $(".menu-btn, .menu-close-btn").click(function(){
     $(".mobile-navi").slideToggle("slow");
   });
+
 
   $(".menu-btn").click(function(){
     $(this).css("color", "red");
@@ -46,11 +46,13 @@ $(document).ready(function(){
 
   const logoEl = document.getElementById("logo-el");
   const footerEl = document.getElementById("footer-el");
-  const sourcesEl = document.getElementById("sources-el");
   const menuEl = document.getElementById("menu-el");
+  const menuCloseEl = document.getElementById("menu-close-el");
 
   logoEl.innerHTML = `<img src="https://www.sitefocus.eu/logo.png" alt="site_logo">`
   footerEl.textContent = "pomorie-info.com 2022. v1.0.22"
+
+
 
   menuEl.innerHTML = `<li>
   <h4>Забележителности и история</h4>
@@ -76,8 +78,7 @@ $(document).ready(function(){
 <li>
   <h4>Плажове</h4>
   <a href="#">Южен плаж - нов град</a>
-  <a href="#">Северен плаж - Крайбрежна</a>
-  <a href="#">Централен плаж - Атриум</a>
+  <a href="#">Източен плаж - Крайбрежна, стар град</a>
   <a href="#">Местност "Косата"</a>
 </li>
 
@@ -116,8 +117,5 @@ $(document).ready(function(){
   <a href="#">Нощни заведения</a>
   <a href="#">Бийч барове</a>
 </li>`
-
-  
-  
 
 });
